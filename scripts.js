@@ -16,6 +16,27 @@ function createGrid (gridNumber) {
         container.insertAdjacentElement('beforeend', gridItem);
     }
     let gridPixels = container.querySelectorAll('div');
-    gridPixels.forEach(gridPixels => gridPixels.addEventListener('mouseover', color));
+    gridPixels.forEach(gridPixels => gridPixels.addEventListener('mouseover', colorGrid));
 }
 
+function colorGrid() {
+    switch (color) {
+        case 'rainbow':
+            this.style.backgroundColor = `hsl(${Math.random() *360}, 100%, 50%)`;
+            break;
+        case 'eraser':
+            this.style.backgroundColor = '#ffffff';
+            break;
+        case 'black':
+            this.style.backgroundColor = '#000000';
+            break;
+        default:
+            this.style.backgroundColor = color;
+            break;
+    }
+}
+
+function eraseAllColor() {
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixels => gridPixels.style.backgroundColor = '#ffffff');
+}
