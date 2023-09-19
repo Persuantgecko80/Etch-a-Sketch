@@ -40,3 +40,9 @@ function eraseAllColor() {
     let gridPixels = container.querySelectorAll('div');
     gridPixels.forEach(gridPixels => gridPixels.style.backgroundColor = '#ffffff');
 }
+
+function pixelSize() {
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixels => gridPixels.remove());
+    createGrid(slider.value);
+}
