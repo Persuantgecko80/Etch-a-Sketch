@@ -1,4 +1,9 @@
 const container = document.querySelector('.container');
+const colorButtons = document.querySelectorAll('.colorChoice');
+const userColorPicker = document.querySelector('#inputColor');
+const clearButton = document.querySelector('.clear');
+const slider = document.querySelector('#sizeRange');
+let color = 'black'
 
 
 
@@ -11,6 +16,6 @@ function createGrid (gridNumber) {
         container.insertAdjacentElement('beforeend', gridItem);
     }
     let gridPixels = container.querySelectorAll('div');
-    gridPixels.forEach(gridPixels => gridPixels.addEventListener('mouseover', 'black'));
+    gridPixels.forEach(gridPixels => gridPixels.addEventListener('mouseover', color));
 }
 

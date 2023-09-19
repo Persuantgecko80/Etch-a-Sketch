@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
 </head>
 <body>
+    <h1>Etch-A-Sketch</h1>
+    <div class="buttons">
+        <button class="color-choice" data-color="black" type="button">Black</button>
+        <button class="color-choice" data-color="rainbow" type="button">Rainbow</button>
+        <button class="color-choice" data-color="eraser" type="button">Eraser</button>
+        <button class="color-choice">Pick: <input type="color" value="#ff0000" id="input-color"></button>
+    </div>
+
+    <div class="containerWrapper">
+        <div class="container">
+        </div>
+    </div>
+
+    <div class="gridOptions">
+        <button class="clear" type="button">Clear</button>
+        <div class="sizeContainer">
+            <p>Pixel Size</p>
+            <input type="range" min="4" max="100" value="16" id="sizerange" class="slider">
+        </div>
+    </div>
     
 </body>
 </html>
