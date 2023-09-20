@@ -2,16 +2,17 @@ let color = "black";
 let click = false;
 document.addEventListener("DOMContentLoaded", function(){
     createBoard(16);
+    draw.innerHTML = "Click to Draw!";
 
     document.querySelector("body").addEventListener("click", function(e){
         if(e.target.tagName != "BUTTON"){
             click = !click;
             let draw = document.querySelector("#draw");
             if(click){
-                draw.innerHTML = "You can draw now!";
+                draw.innerHTML = "You Can Draw Now!";
             }
             else{
-                draw.innerHTML = "You can't draw now!";
+                draw.innerHTML = "Click to Draw!";
             }
         }
     })
